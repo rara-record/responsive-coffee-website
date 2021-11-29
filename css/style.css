@@ -509,6 +509,9 @@ section {
         color: var(--main-color); }
         .book .inner form .form-box:focus {
           border: var(--border-hover); }
+      .book .inner form textarea {
+        height: 15rem;
+        resize: none; }
 
 .footer {
   width: 100%;
@@ -541,5 +544,80 @@ section {
     .footer .credit strong {
       border-bottom: var(--border-hover);
       font-weight: normal; }
+
+/*=============== media queries ===============*/
+@media (max-width: 991px) {
+  html {
+    font-size: 55%; }
+
+  .header {
+    padding: 2rem; }
+
+  section {
+    padding: 2rem; } }
+@media (max-width: 768px) {
+  .heading {
+    font-size: 6rem; }
+    .heading::after {
+      font-size: 2.3rem; }
+
+  .header .navbar {
+    display: block;
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); }
+    .header .navbar li {
+      font-size: 2.2rem;
+      padding: 1.5rem 2rem; }
+      .header .navbar li a {
+        margin: 0; }
+  .header #menu-btn {
+    display: initial; }
+
+  .home .inner .text-box {
+    text-align: center; }
+    .home .inner .text-box h2 {
+      font-size: 4rem; }
+
+  .menu {
+    background: url(../../img/menu-bg.jpg) no-repeat center center;
+    background-size: cover; }
+    .menu h1::after {
+      content: "popular menu"; }
+    .menu .inner > article .box {
+      flex-direction: column;
+      margin-left: 0;
+      margin-top: 6rem;
+      text-align: center; }
+      .menu .inner > article .box .menu-img {
+        margin-left: 0;
+        margin-top: -6rem;
+        height: 8rem; }
+      .menu .inner > article .box .text-box h2 {
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: var(--main-color);
+        line-height: 1.8; }
+      .menu .inner > article .box .text-box p {
+        font-size: 1.6rem;
+        color: var(--main-color);
+        line-height: 1.8;
+        padding: 1rem 0; }
+      .menu .inner > article .box .text-box span {
+        font-size: 2rem;
+        color: var(--main-color);
+        line-height: 1.8; }
+    .menu .inner > article:hover .box {
+      border: var(--border-hover);
+      border-radius: var(--border-radius-hover); } }
+@media (max-width: 450px) {
+  html {
+    font-size: 50%; }
+
+  .home .inner figure img {
+    height: auto; } }
 
 /*# sourceMappingURL=style.css.map */

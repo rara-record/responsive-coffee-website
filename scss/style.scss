@@ -9,3 +9,130 @@
 @import "components/review.scss";
 @import "components/book.scss";
 @import "components/footer.scss";
+
+/*=============== media queries ===============*/
+@media (max-width: 991px) {
+	html {
+		font-size: 55%;
+	}
+
+	.header {
+		padding: 2rem;
+	}
+
+	section {
+		padding: 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.heading {
+		font-size: 6rem;
+
+		&::after {
+			font-size: 2.3rem;
+		}
+	}
+
+	.header {
+		.navbar {
+			display: block;
+			position: absolute;
+			top: 99%;
+			left: 0;
+			right: 0;
+			background: #fff;
+			clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+			li {
+				font-size: 2.2rem;
+				padding: 1.5rem 2rem;
+
+				a {
+					margin: 0;
+				}
+			}
+		}
+
+		#menu-btn {
+			display: initial;
+		}
+	}
+
+	.home {
+		.inner {
+			.text-box {
+				text-align: center;
+
+				h2 {
+					font-size: 4rem;
+				}
+			}
+		}
+	}
+
+	.menu {
+		background: url(../../img/menu-bg.jpg) no-repeat center center;
+		background-size: cover;
+
+		h1 {
+			&::after {
+				content: "popular menu";
+			}
+		}
+
+		.inner {
+			> article {
+				.box {
+					flex-direction: column;
+					margin-left: 0;
+					margin-top: 6rem;
+					text-align: center;
+
+					.menu-img {
+						margin-left: 0;
+						margin-top: -6rem;
+						height: 8rem;
+					}
+
+					.text-box {
+						h2 {
+							font-size: 2.2rem;
+							font-weight: bold;
+							color: var(--main-color);
+							line-height: 1.8;
+						}
+
+						p {
+							font-size: 1.6rem;
+							color: var(--main-color);
+							line-height: 1.8;
+							padding: 1rem 0;
+						}
+
+						span {
+							font-size: 2rem;
+							color: var(--main-color);
+							line-height: 1.8;
+						}
+					}
+				}
+
+				&:hover .box {
+					border: var(--border-hover);
+					border-radius: var(--border-radius-hover);
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	html {
+		font-size: 50%;
+	}
+
+	.home .inner figure img {
+		height: auto;
+	}
+}
