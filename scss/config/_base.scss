@@ -70,6 +70,19 @@ section {
 	position: relative;
 }
 
+.heading::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	font: bold 3rem/1 "Poppins";
+	color: var(--main-color);
+	text-transform: none;
+}
+
 .btn {
 	display: inline-block;
 	padding: 0.9rem 1.5rem;

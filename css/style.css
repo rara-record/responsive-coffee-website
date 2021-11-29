@@ -226,6 +226,18 @@ section {
   pointer-events: none;
   position: relative; }
 
+.heading::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font: bold 3rem/1 "Poppins";
+  color: var(--main-color);
+  text-transform: none; }
+
 .btn {
   display: inline-block;
   padding: 0.9rem 1.5rem;
@@ -320,16 +332,7 @@ section {
   width: 100%;
   height: 100%; }
   .about h1::after {
-    content: "why choose us";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    font: bold 3rem/1 "Poppins";
-    color: var(--main-color);
-    text-transform: none; }
+    content: "why choose us"; }
   .about .inner {
     display: flex;
     flex-wrap: wrap;
@@ -377,5 +380,47 @@ section {
   50% {
     transform: scale(0.8);
     border-radius: var(--border-radius); } }
+.menu {
+  background: url(../../img/menu-bg.jpg) no-repeat center center;
+  background-size: cover; }
+  .menu h1::after {
+    content: "popular menu"; }
+  .menu .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem; }
+    .menu .inner > article {
+      flex: 1 1 42rem; }
+      .menu .inner > article .box {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem;
+        margin-left: 6rem;
+        border: var(--border);
+        border-radius: var(--border-radius); }
+        .menu .inner > article .box .menu-img {
+          margin-left: -6rem;
+          height: 10rem; }
+        .menu .inner > article .box .text-box h2 {
+          font-size: 2.2rem;
+          font-weight: bold;
+          color: var(--main-color);
+          line-height: 1.8; }
+        .menu .inner > article .box .text-box p {
+          font-size: 1.6rem;
+          color: var(--main-color);
+          line-height: 1.8;
+          padding: 1rem 0; }
+        .menu .inner > article .box .text-box span {
+          font-size: 2rem;
+          color: var(--main-color);
+          line-height: 1.8; }
+      .menu .inner > article:hover .box {
+        border: var(--border-hover);
+        border-radius: var(--border-radius-hover); }
 
 /*# sourceMappingURL=style.css.map */
