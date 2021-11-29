@@ -160,6 +160,24 @@ img {
   height: auto;
   max-width: 100%; }
 
+/*=============== GOOGLE FONTS ===============*/
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --main-color: #443;
+  --border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+  --border-radius-hover: 4% 95% 6% 95%/95% 4% 92% 5%;
+  --border: 0.2rem solid var(--main-color);
+  --border-hover: 0.2rem dashed var(--main-color); }
+
+/*=============== BASE CSS ===============*/
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear; }
+
 /* IR 효과 */
 .ir_pm {
   display: block;
@@ -187,24 +205,6 @@ img {
   text-indent: -9999px; }
 
 /* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
-/*=============== GOOGLE FONTS ===============*/
-/*=============== VARIABLES CSS ===============*/
-:root {
-  --main-color: #443;
-  --border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
-  --border-radius-hover: 4% 95% 6% 95%/95% 4% 92% 5%;
-  --border: 0.2rem solid var(--main-color);
-  --border-hover: 0.2rem dashed var(--main-color); }
-
-/*=============== BASE CSS ===============*/
-* {
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  text-transform: capitalize;
-  transition: all 0.2s linear; }
-
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -215,6 +215,16 @@ section {
   position: relative;
   padding: 2rem 9%;
   margin: auto; }
+
+.heading {
+  font-size: 9rem;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 0.05rem var(--main-color);
+  letter-spacing: 0.2rem;
+  text-align: center;
+  pointer-events: none;
+  position: relative; }
 
 .btn {
   display: inline-block;
@@ -275,14 +285,14 @@ section {
     flex-wrap: wrap;
     gap: 1.5rem; }
     .home .inner .text-box {
-      flex: 1; }
+      flex: 1 1 42rem; }
       .home .inner .text-box h2 {
         font-size: 6.5rem;
         font-weight: bold;
         color: var(--main-color);
         text-transform: uppercase; }
     .home .inner figure {
-      flex: 1;
+      flex: 1 1 42rem;
       padding-top: 10rem;
       text-align: center; }
       .home .inner figure img {
@@ -306,5 +316,66 @@ section {
     transform: translateY(0rem); }
   50% {
     transform: translateY(-7rem); } }
+.about {
+  width: 100%;
+  height: 100%; }
+  .about h1::after {
+    content: "why choose us";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font: bold 3rem/1 "Poppins";
+    color: var(--main-color);
+    text-transform: none; }
+  .about .inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem; }
+    .about .inner figure {
+      flex: 1 1 42rem; }
+      .about .inner figure img {
+        width: 100%;
+        animation: aboutImage 4s linear infinite; }
+    .about .inner .text-box {
+      flex: 1 1 42rem; }
+      .about .inner .text-box .title {
+        color: var(--main-color);
+        font-size: 3rem;
+        line-height: 1.8; }
+      .about .inner .text-box p {
+        color: var(--main-color);
+        font-size: 1.5rem;
+        line-height: 1.8;
+        padding: 1rem 0; }
+      .about .inner .text-box .icons-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding-top: 3rem; }
+        .about .inner .text-box .icons-container article {
+          flex: 1 1 15rem;
+          padding: 1.5rem;
+          text-align: center;
+          border: var(--border);
+          border-radius: var(--border-radius); }
+          .about .inner .text-box .icons-container article img {
+            height: 5rem; }
+          .about .inner .text-box .icons-container article h3 {
+            font-size: 1.7rem;
+            padding-top: 1rem;
+            color: var(--main-color); }
+
+@keyframes aboutImage {
+  0%,
+	100% {
+    transform: scale(0.9);
+    border-radius: var(--border-radius-hover); }
+  50% {
+    transform: scale(0.8);
+    border-radius: var(--border-radius); } }
 
 /*# sourceMappingURL=style.css.map */

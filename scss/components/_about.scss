@@ -1,0 +1,89 @@
+.about {
+	width: 100%;
+	height: 100%;
+
+	h1 {
+		&::after {
+			content: "why choose us";
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			font: bold 3rem/1 "Poppins";
+			color: var(--main-color);
+			text-transform: none;
+		}
+	}
+
+	.inner {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 1.5rem;
+
+		figure {
+			flex: 1 1 42rem;
+
+			img {
+				width: 100%;
+				animation: aboutImage 4s linear infinite;
+			}
+		}
+
+		.text-box {
+			flex: 1 1 42rem;
+
+			.title {
+				color: var(--main-color);
+				font-size: 3rem;
+				line-height: 1.8;
+			}
+
+			p {
+				color: var(--main-color);
+				font-size: 1.5rem;
+				line-height: 1.8;
+				padding: 1rem 0;
+			}
+
+			.icons-container {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1rem;
+				padding-top: 3rem;
+
+				article {
+					flex: 1 1 15rem;
+					padding: 1.5rem;
+					text-align: center;
+					border: var(--border);
+					border-radius: var(--border-radius);
+
+					img {
+						height: 5rem;
+					}
+
+					h3 {
+						font-size: 1.7rem;
+						padding-top: 1rem;
+						color: var(--main-color);
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes aboutImage {
+	0%,
+	100% {
+		transform: scale(0.9);
+		border-radius: var(--border-radius-hover);
+	}
+	50% {
+		transform: scale(0.8);
+		border-radius: var(--border-radius);
+	}
+}
