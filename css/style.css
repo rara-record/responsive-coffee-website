@@ -85,8 +85,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -201,12 +199,9 @@ img {
 /*=============== BASE CSS ===============*/
 * {
   font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   outline: none;
   border: none;
-  text-decoration: none;
   text-transform: capitalize;
   transition: all 0.2s linear; }
 
@@ -217,7 +212,9 @@ html {
   scroll-behavior: smooth; }
 
 section {
-  padding: 2rem 9%; }
+  position: relative;
+  padding: 2rem 9%;
+  margin: auto; }
 
 .btn {
   display: inline-block;
@@ -255,11 +252,59 @@ section {
   .header .navbar {
     display: flex; }
     .header .navbar li {
-      margin: 0 1rem;
       font-size: 1.7rem; }
       .header .navbar li a {
+        margin: 0 1.2rem;
         color: var(--main-color); }
   .header .btn {
     margin-top: 0; }
+  .header #menu-btn {
+    font-size: 3rem;
+    color: var(--main-color);
+    display: none; }
+
+.home {
+  min-height: 100vh;
+  padding-top: 12rem;
+  background: url(../../img/home-bg.jpg) no-repeat center center;
+  background-size: cover; }
+  .home .inner {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem; }
+    .home .inner .text-box {
+      flex: 1; }
+      .home .inner .text-box h2 {
+        font-size: 6.5rem;
+        font-weight: bold;
+        color: var(--main-color);
+        text-transform: uppercase; }
+    .home .inner figure {
+      flex: 1;
+      padding-top: 10rem;
+      text-align: center; }
+      .home .inner figure img {
+        height: 35rem;
+        animation: float 4s linear infinite; }
+  .home .img-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0; }
+    .home .img-slider article {
+      margin: 5rem 0.8rem;
+      cursor: pointer; }
+      .home .img-slider article img {
+        height: 9rem; }
+
+@keyframes float {
+  0%,
+	100% {
+    transform: translateY(0rem); }
+  50% {
+    transform: translateY(-7rem); } }
 
 /*# sourceMappingURL=style.css.map */
