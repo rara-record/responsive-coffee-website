@@ -1,0 +1,53 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+	--main-color: #443;
+	--border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+	--border-radius-hover: 4% 95% 6% 95%/95% 4% 92% 5%;
+	--border: 0.2rem solid var(--main-color);
+	--border-hover: 0.2rem dashed var(--main-color);
+}
+
+/*=============== BASE CSS ===============*/
+
+* {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: all 0.2s linear;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-padding-top: 7rem;
+	scroll-behavior: smooth;
+}
+
+section {
+	padding: 2rem 9%;
+}
+
+.btn {
+	display: inline-block;
+	padding: 0.9rem 1.5rem;
+	border-radius: var(--border-radius);
+	color: var(--main-color);
+	background: none;
+	border: var(--border);
+	cursor: pointer;
+	margin-top: 1rem;
+	font-size: 1.7rem;
+}
+
+.btn:hover {
+	border-radius: var(--border-radius-hover);
+	border: var(--border-hover);
+}
