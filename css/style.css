@@ -347,8 +347,7 @@ section {
       flex: 1 1 42rem; }
       .about .inner .text-box .title {
         color: var(--main-color);
-        font-size: 3rem;
-        line-height: 1.8; }
+        font: bold 3rem/1.8 "Poppins"; }
       .about .inner .text-box p {
         color: var(--main-color);
         font-size: 1.5rem;
@@ -422,5 +421,66 @@ section {
       .menu .inner > article:hover .box {
         border: var(--border-hover);
         border-radius: var(--border-radius-hover); }
+
+.review {
+  width: 100%;
+  height: 100%; }
+  .review h1::after {
+    content: "What People Says"; }
+  .review .review-slider {
+    padding: 7rem 0; }
+    .review .review-slider .box {
+      position: relative;
+      padding: 2rem;
+      text-align: center;
+      z-index: 0;
+      border: var(--border);
+      border-radius: var(--border-radius); }
+      .review .review-slider .box .fa-quote-left {
+        position: absolute;
+        top: 2rem;
+        left: 2.5rem;
+        font-size: 6rem;
+        color: #ccc;
+        z-index: -1; }
+      .review .review-slider .box .fa-quote-right {
+        position: absolute;
+        bottom: 2rem;
+        right: 2.5rem;
+        font-size: 6rem;
+        color: #ccc;
+        z-index: -1; }
+      .review .review-slider .box img {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        margin-bottom: 0.7rem; }
+      .review .review-slider .box .stars {
+        padding: 0.5rem 0; }
+        .review .review-slider .box .stars i {
+          font-size: 1.7rem;
+          color: var(--main-color); }
+      .review .review-slider .box p {
+        font-size: 1.6rem;
+        color: var(--main-color);
+        padding: 1rem 0;
+        line-height: 1.8; }
+      .review .review-slider .box h3 {
+        font-size: 2.2rem;
+        color: var(--main-color);
+        line-height: 1.8; }
+      .review .review-slider .box span {
+        font-size: 1.5rem;
+        color: var(--main-color); }
+      .review .review-slider .box:hover .fa-quote-left {
+        top: -6.5rem; }
+      .review .review-slider .box:hover .fa-quote-right {
+        bottom: -6.5rem; }
+    .review .review-slider .swiper-pagination-bullet {
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 0; }
+    .review .review-slider .swiper-pagination-bullet-active {
+      background: var(--main-color); }
 
 /*# sourceMappingURL=style.css.map */
