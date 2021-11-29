@@ -235,5 +235,31 @@ section {
   border: var(--border-hover); }
 
 /*=============== HEADER ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 2rem 9%; }
+  .header .logo a {
+    color: var(--main-color);
+    font-size: 2.3rem; }
+    .header .logo a i {
+      padding-left: 0.5rem; }
+  .header .navbar {
+    display: flex; }
+    .header .navbar li {
+      margin: 0 1rem;
+      font-size: 1.7rem; }
+      .header .navbar li a {
+        color: var(--main-color); }
+  .header .btn {
+    margin-top: 0; }
 
 /*# sourceMappingURL=style.css.map */
