@@ -18,7 +18,8 @@ window.addEventListener('scroll', () => {
 
 // Home에 slider img를 클릭하면, 메인 이미지 바뀌기
 homeSliderImg.forEach(img => {
-  img.addEventListener('click', () => {
+  img.addEventListener('click', e => {
+    e.preventDefault();
     let currentImg = img.getAttribute('src');
     homeMainImg.src = currentImg;
   })
