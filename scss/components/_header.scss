@@ -45,5 +45,9 @@
 		font-size: 3rem;
 		color: var(--main-color);
 		display: none;
+
+		&.fa-times {
+			transform: rotate(180deg);
+		}
 	}
 }

@@ -36,7 +36,7 @@
 
 	.header {
 		.navbar {
-			display: block;
+			flex-direction: column;
 			position: absolute;
 			top: 99%;
 			left: 0;
@@ -51,6 +51,10 @@
 				a {
 					margin: 0;
 				}
+			}
+
+			&.active {
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 			}
 		}
 

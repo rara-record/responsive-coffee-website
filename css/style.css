@@ -284,6 +284,8 @@ section {
     font-size: 3rem;
     color: var(--main-color);
     display: none; }
+    .header #menu-btn.fa-times {
+      transform: rotate(180deg); }
 
 .home {
   min-height: 100vh;
@@ -562,7 +564,7 @@ section {
       font-size: 2.3rem; }
 
   .header .navbar {
-    display: block;
+    flex-direction: column;
     position: absolute;
     top: 99%;
     left: 0;
@@ -574,6 +576,8 @@ section {
       padding: 1.5rem 2rem; }
       .header .navbar li a {
         margin: 0; }
+    .header .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
   .header #menu-btn {
     display: initial; }
 
